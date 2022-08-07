@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
     <div id="main">
-    <span>{state}</span>
+    <span id="counter">{state}</span>
 <button id="increment-btn" onClick={()=>dispatch({type: "increment"})}>Increment</button>
 <button id="decrement-btn" onClick={()=>dispatch({type: "decrement"})}>Decrement</button> 
     </div>
