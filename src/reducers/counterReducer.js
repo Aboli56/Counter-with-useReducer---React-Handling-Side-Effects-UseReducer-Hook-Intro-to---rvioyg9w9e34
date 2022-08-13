@@ -1,11 +1,14 @@
-const counterReducer = (state,action) =>{
-switch (action.type){
-    case "increment":
-    return state+1;
-    case "decrement":
-    return state-1;
-  default:
-    throw new Error();
+import { INCREMENT, DECREMENT } from '../components/action.type';
+
+const counterReducer = (state, action) => {
+    switch (action.type) {
+        case INCREMENT:
+            return { count: state.count + 1 };
+        case DECREMENT:
+            return { count: state.count - 1 };
+        default:
+            return state;
+    }
 }
 
-export {counterReducer}
+export { counterReducer }
